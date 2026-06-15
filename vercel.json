@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://auramart-3aey.onrender.com/api/:path*"
+    }
+  ]
+}
