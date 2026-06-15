@@ -9,9 +9,27 @@ connectDB();
 
 const app = express();
 
-// Set CORS for frontend URL / allow single-node deploy
+// Set CORS for frontend URL / allow Vercel previews and deployments
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://127.0.0.1:3000',
+  process.env.FRONTEND_URL
+].filter(Boolean);
+
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://127.0.0.1:3000', process.env.FRONTEND_URL],
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps, curl, or server-to-server)
+    if (!origin) return callback(null, true);
+    
+    const isAllowed = allowedOrigins.includes(origin);
+    const isVercel = origin.endsWith('.vercel.app');
+    
+    if (isAllowed || isVercel) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
