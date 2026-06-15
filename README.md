@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   <img src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png" alt="AuraMart Logo" width="80" />
   <h1>AuraMart - Full-Stack MERN E-Commerce App</h1>
@@ -74,3 +75,7 @@ The server codebase features a seamless fallback mechanic leveraging Node `proce
 ## 📄 Postman Documentations
 This repository includes a fully-scaffolded API testing toolkit: **`AuraMart_Postman_Collection.json`**. 
 Simply Import this file directly into the local Postman IDE. It features variables like `{{token}}` properly mapped to effortlessly check protected admin/user/order payloads. Happy coding!
+=======
+# AuraMart
+A premium MERN-stack e-commerce platform rebranded as AuraMart, featuring a modern dark glassmorphic UI/UX, Razorpay test payment integration, email notifications, and an innovative AuraMatch AI Style Lab custom product builder &amp; fit calculator.
+>>>>>>> f188a40cb0334a14e2ecc6c1ee996e3fa6bf1256
