@@ -67,7 +67,8 @@ const Checkout = () => {
               dispatch(clearCart());
               navigate('/ordersuccess');
             } else {
-              alert('Order saving failed');
+              const errorData = await saveOrderRes.json().catch(() => ({}));
+              alert(errorData.message || 'Order saving failed');
             }
           } else {
             alert('Payment verification failed');
@@ -107,6 +108,9 @@ const Checkout = () => {
     if (saveOrderRes.ok) {
       dispatch(clearCart());
       navigate('/ordersuccess');
+    } else {
+      const errorData = await saveOrderRes.json().catch(() => ({}));
+      alert(errorData.message || 'Order saving failed');
     }
   };
 
