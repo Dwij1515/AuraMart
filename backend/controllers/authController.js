@@ -22,7 +22,7 @@ const registerUser = async (req, res) => {
       
       // Generate a mock OTP
       const otp = Math.floor(100000 + Math.random() * 900000);
-      // Send Welcome / OTP Email inside try-catch to prevent SMTP errors from blocking registration
+      // Send Welcome / OTP Email in the background to prevent SMTP errors from blocking registration
       try {
         const message = `
           <h2>Welcome to AuraMart, ${name}!</h2>
@@ -30,13 +30,15 @@ const registerUser = async (req, res) => {
           <p>Your one-time verification/discount OTP is: <strong>${otp}</strong></p>
         `;
 
-        await sendEmail({
+        sendEmail({
           email: user.email,
           subject: 'Welcome to AuraMart - Your OTP',
           message
+        }).catch(emailError => {
+          console.error('Welcome email sending failed (async):', emailError.message);
         });
       } catch (emailError) {
-        console.error('Welcome email sending failed:', emailError.message);
+        console.error('Welcome email initialization failed:', emailError.message);
       }
 
       res.status(201).json({
