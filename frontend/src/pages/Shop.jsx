@@ -6,6 +6,7 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -22,7 +23,15 @@ const Shop = () => {
     fetchProducts();
   }, []);
 
-  const filteredProducts = products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()));
+  // Extract unique categories dynamically
+  const categories = ['All', ...new Set(products.map(p => p.category))];
+
+  const filteredProducts = products.filter((product) => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(search.toLowerCase()) ||
+      product.description.toLowerCase().includes(search.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="shop-container">
@@ -34,14 +43,36 @@ const Shop = () => {
         onChange={(e) => setSearch(e.target.value)}
         className="search-bar"
       />
+
+      {/* Category selection bar */}
+      {!loading && (
+        <div className="category-filter-container">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      )}
+
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="product-grid">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product._id} product={product} />
-          ))}
-        </div>
+        <>
+          {filteredProducts.length === 0 ? (
+            <div className="no-products">No products found matching your search.</div>
+          ) : (
+            <div className="product-grid">
+              {filteredProducts.map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

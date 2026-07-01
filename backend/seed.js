@@ -76,20 +76,10 @@ const importData = async () => {
         numReviews: 18
       },
       {
-        name: 'Zenith Premium Leather Wallet',
-        description: 'Sleek, RFID-blocking card holder wallet crafted with premium full-grain leather.',
-        price: 45.00,
-        category: 'Accessories',
-        stock: 40,
-        imageUrl: 'https://images.unsplash.com/photo-1606503152159-2ffd1414efaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-        ratings: 4.4,
-        numReviews: 32
-      },
-      {
         name: 'Nebula Smart Water Bottle',
         description: 'Self-cleaning smart bottle with UV-C purification and dynamic LED temperature displays.',
         price: 79.99,
-        category: 'Fitness',
+        category: 'Sports',
         stock: 20,
         imageUrl: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
         ratings: 4.6,
@@ -104,6 +94,116 @@ const importData = async () => {
         imageUrl: 'https://images.unsplash.com/photo-1616440347437-b1c73416efc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
         ratings: 4.5,
         numReviews: 22
+      },
+      {
+        name: 'Ultralight Sports Smartwatch',
+        description: 'A sleek smartwatch with high-performance tracking and modern style.',
+        price: 199.99,
+        category: 'Sports',
+        stock: 15,
+        imageUrl: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.6,
+        numReviews: 29
+      },
+      {
+        name: 'Ergonomic Office Chair',
+        description: 'Advanced lumbar support and breathable mesh for maximum comfort.',
+        price: 349.99,
+        category: 'Furniture',
+        stock: 12,
+        imageUrl: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.7,
+        numReviews: 34
+      },
+      {
+        name: 'Carbon Fiber Tennis Racket',
+        description: 'Professional racket providing exceptional speed, control, and precision.',
+        price: 180.00,
+        category: 'Sports',
+        stock: 18,
+        imageUrl: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.8,
+        numReviews: 19
+      },
+      {
+        name: 'Premium Leather Laptop Sleeve',
+        description: 'Elegant protection for your laptop, crafted with full-grain leather and soft interior lining.',
+        price: 59.99,
+        category: 'Clothing',
+        stock: 35,
+        imageUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.5,
+        numReviews: 42
+      },
+      {
+        name: 'Retro Synthwave Sound Kit',
+        description: 'Over 500 premium synth, drum, and sound loops for audio production and composition.',
+        price: 49.99,
+        category: 'Digital',
+        stock: 100,
+        imageUrl: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.9,
+        numReviews: 88
+      },
+      {
+        name: 'Master MERN Stack E-Book',
+        description: 'The ultimate guide to building complete web applications with MongoDB, Express, React, and Node.',
+        price: 24.99,
+        category: 'Digital',
+        stock: 500,
+        imageUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.7,
+        numReviews: 124
+      },
+      {
+        name: 'HD Portable Bluetooth Speaker',
+        description: 'Compact wireless speaker with deep bass, high clarity, and 24-hour battery life.',
+        price: 89.99,
+        category: 'Electronics',
+        stock: 30,
+        imageUrl: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.4,
+        numReviews: 53
+      },
+      {
+        name: 'Cyberpunk Desktop Wallpaper Pack',
+        description: 'Set of 10 ultra high-resolution wallpapers featuring neon aesthetics and futuristic cities.',
+        price: 9.99,
+        category: 'Digital',
+        stock: 1000,
+        imageUrl: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.8,
+        numReviews: 212
+      },
+      {
+        name: 'Pro Resistance Bands Set',
+        description: 'Complete stackable resistance band set with handles, ankle straps, and door anchor.',
+        price: 34.99,
+        category: 'Sports',
+        stock: 45,
+        imageUrl: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.6,
+        numReviews: 61
+      },
+      {
+        name: 'Minimalist Aluminum Water Tumbler',
+        description: 'Double-walled insulated tumbler for hot and cold beverages on the go.',
+        price: 19.99,
+        category: 'Clothing',
+        stock: 75,
+        imageUrl: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.3,
+        numReviews: 27
+      },
+      {
+        name: 'Glassmorphic Desk Organizer',
+        description: 'Sleek, transparent desk organizer tray to keep your writing tools and accessories in order.',
+        price: 39.99,
+        category: 'Furniture',
+        stock: 22,
+        imageUrl: 'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        ratings: 4.5,
+        numReviews: 18
       }
     ];
 
